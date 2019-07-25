@@ -15,9 +15,9 @@ categories = ["data-structures", "text-processing"]
 
 [dependencies]
 sgx_tstd = "1.0.8"
-nibble_vec = "~0.0.3"
-endian-type = "0.1.2"
-serde = { version = "1.0", optional = true }
+nibble_vec = { git = "https://github.com/nabilschear/rust_nibble_vec"}
+endian-type = { git = "https://github.com/nabilschear/endian-type" }
+serde = { version = "1.0", optional = true , default-features = false }
 
 [dev-dependencies]
 quickcheck = "0.4"
