@@ -14,7 +14,7 @@ keywords = ["trie", "patricia", "collection", "generic", "prefix"]
 categories = ["data-structures", "text-processing"]
 
 [dependencies]
-sgx_tstd = "1.0.8"
+sgx_tstd = { rev = "v1.0.8", git = "https://github.com/baidu/rust-sgx-sdk.git" }
 nibble_vec = { git = "https://github.com/nabilschear/rust_nibble_vec"}
 endian-type = { git = "https://github.com/nabilschear/endian-type" }
 serde = { version = "1.0", optional = true , default-features = false }
