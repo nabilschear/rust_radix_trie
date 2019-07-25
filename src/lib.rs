@@ -4,6 +4,10 @@
 
 // #![warn(missing_docs)]
 
+#![no_std]
+#[macro_use]
+extern crate sgx_tstd as std;
+
 extern crate endian_type;
 extern crate nibble_vec;
 #[cfg(test)]

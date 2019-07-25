@@ -1,5 +1,5 @@
 //! This module contains the core algorithms.
-
+use std::prelude::v1::*;
 use keys::{match_keys, KeyMatch};
 use std::borrow::Borrow;
 use trie_node::TrieNode;

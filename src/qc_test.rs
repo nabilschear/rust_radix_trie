@@ -1,3 +1,4 @@
+use std::prelude::v1::*;
 //! Proper testing, with QuickCheck.
 
 use quickcheck::{quickcheck, Arbitrary, Gen};

@@ -1,4 +1,5 @@
 //! Iterators over key-value pairs, keys, values and child subtries.
+use std::prelude::v1::*;
 
 use std::iter::{FilterMap, FromIterator, Map};
 use std::slice;

@@ -1,3 +1,5 @@
+use std::prelude::v1::*;
+
 use iter::*;
 use trie_node::TrieNode;
 use {NibbleVec, SubTrie, SubTrieMut, Trie, TrieKey};

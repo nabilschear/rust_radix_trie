@@ -1,3 +1,5 @@
+use std::prelude::v1::*;
+
 extern crate serde;
 
 use self::serde::ser::SerializeMap;
