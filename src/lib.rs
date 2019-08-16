@@ -4,13 +4,10 @@
 
 // #![warn(missing_docs)]
 
-#![cfg_attr(target_env = "sgx", no_std)]
-#![cfg_attr(target_env = "sgx", feature(rustc_private))]
-
-#[cfg(target_env = "sgx")]
+#![cfg_attr(feature = "sgx", no_std)]
+#[cfg(feature = "sgx")]
 #[macro_use]
 extern crate sgx_tstd as std;
-
 use std::prelude::v1::*;
 
 extern crate endian_type;
