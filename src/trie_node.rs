@@ -5,7 +5,7 @@ use std::borrow::Borrow;
 use std::default::Default;
 use {NibbleVec, SubTrie, SubTrieMut, BRANCH_FACTOR};
 
-#[derive(Debug)]
+#[derive(Debug, Clone)]
 pub struct TrieNode<K, V> {
     /// Key fragments/bits associated with this node, such that joining the keys from all
     /// parent nodes and this node is equal to the bit-encoding of this node's key.
@@ -22,7 +22,7 @@ pub struct TrieNode<K, V> {
     pub children: [Option<Box<TrieNode<K, V>>>; BRANCH_FACTOR],
 }
 
-#[derive(Debug)]
+#[derive(Debug, Clone)]
 pub struct KeyValue<K, V> {
     pub key: K,
     pub value: V,

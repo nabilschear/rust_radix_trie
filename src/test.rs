@@ -451,6 +451,7 @@ fn test_get_raw_descendant_borrow() {
 fn test_prefix() {
     let mut t = Trie::<u8, ()>::new();
     t.insert(0xf1, ());
+    t.remove(&0xf2);
     t.insert(0xf2, ());
     println!("{:#?}", t);
     assert_eq!(t.prefix(), [].as_ref());
@@ -462,4 +463,18 @@ fn test_prefix() {
     assert!(c.next().is_none());
     assert_eq!(second.prefix(), [0x1].as_ref());
     assert_eq!(third.prefix(), [0x2].as_ref());
+}
+
+#[test]
+fn clone() {
+    let mut t1 = test_trie();
+    let mut t2 = t1.clone();
+
+    assert_eq!(t1, t2);
+    t1.insert("abc", 22);
+
+    assert_ne!(t1, t2);
+    t2.insert("abc", 22);
+
+    assert_eq!(t1, t2);
 }
